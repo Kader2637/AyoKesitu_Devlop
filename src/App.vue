@@ -11,7 +11,6 @@ import Navbar from './components/Navbar.vue'
         <img src="/public/asset/image/bannerhome.png" alt="Background"
           class="w-full h-full object-cover filter blur-sm" />
       </div>
-
       <Navbar />
 
       <div class="flex flex-col items-center justify-center text-center mt-16 z-10 relative px-4 sm:px-8">
@@ -21,10 +20,10 @@ import Navbar from './components/Navbar.vue'
 
       <div class="flex flex-col items-center justify-center mt-16 px-4 sm:px-8 z-10 relative">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl">
-          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xs mx-auto"
+          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xl mx-auto"
             placeholder="Explore destination">
-          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xs mx-auto" placeholder="Departure">
-          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xs mx-auto" placeholder="Return">
+          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xl mx-auto" placeholder="Departure">
+          <input type="text" class="bg-white border p-5 rounded-full w-full max-w-xl mx-auto" placeholder="Return">
         </div>
       </div>
 
