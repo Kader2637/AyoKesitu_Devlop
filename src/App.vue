@@ -64,66 +64,121 @@ import Navbar from './components/Navbar.vue'
         </div>
       </div>
     </div>
+    <section>
+      <div class="px-6 sm:px-20 mt-10 w-full">
+        <div class="border rounded-lg bg-[#E7F7FF] p-5">
+          <div class="flex gap-4 items-center justify-between">
+            <h1 class="text-gray-700 text-2xl font-bold">Upcoming trip</h1>
+            <div class="border px-2 py-1 bg-white shadow-sm rounded-full"><span>3d:10h:10m</span></div>
+          </div>
+          <div class="grid gap-4 mt-12 grid-cols-1 sm:grid-cols-3">
+            <div class="rounded-lg min-h-64 relative">
+              <div class="absolute inset-0">
+                <img src="/public/asset/image/bali.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
+                style="background-color: rgba(255, 255, 255, 0.9);">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-xl font-semibold">3 day Bali</h4>
+                    <p class="text-gray-600">122 people</p>
+                  </div>
+                  <button
+                    class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg min-h-64 relative">
+              <div class="absolute inset-0">
+                <img src="/public/asset/image/sumba.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
+                style="background-color: rgba(255, 255, 255, 0.9);">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-xl font-semibold">5 Day Sumba</h4>
+                    <p class="text-gray-600">122 people</p>
+                  </div>
+                  <button
+                    class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg min-h-64 relative">
+              <div class="absolute inset-0">
+                <img src="/public/asset/image/bromo.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
+                style="background-color: rgba(255, 255, 255, 0.9);">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-xl font-semibold">2 Day Bromo</h4>
+                    <p class="text-gray-600">122 people</p>
+                  </div>
+                  <button
+                    class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div class="px-6 sm:px-20 py-20 w-full">
-      <div class="border rounded-lg bg-[#E7F7FF] p-5">
-        <div class="flex gap-4 items-center justify-between">
-          <h1 class="text-gray-700 text-2xl font-bold">Upcoming trip</h1>
-          <div class="border px-2 py-1 bg-white shadow-sm rounded-full"><span>3d:10h:10m</span></div>
         </div>
-        <div class="grid gap-4 mt-12 grid-cols-1 sm:grid-cols-3">
-          <div class="rounded-lg min-h-64 relative">
-            <div class="absolute inset-0">
-              <img src="/public/asset/image/bali.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
-              style="background-color: rgba(255, 255, 255, 0.9);">
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-xl font-semibold">3 day Bali</h4>
-                  <p class="text-gray-600">122 people</p>
-                </div>
-                <button
-                  class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
-              </div>
-            </div>
-          </div>
-          <div class="rounded-lg min-h-64 relative">
-            <div class="absolute inset-0">
-              <img src="/public/asset/image/sumba.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
-              style="background-color: rgba(255, 255, 255, 0.9);">
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-xl font-semibold">5 Day Sumba</h4>
-                  <p class="text-gray-600">122 people</p>
-                </div>
-                <button
-                  class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
-              </div>
-            </div>
-          </div>
-          <div class="rounded-lg min-h-64 relative">
-            <div class="absolute inset-0">
-              <img src="/public/asset/image/bromo.png" alt="Bali Trip" class="w-full h-full object-cover rounded-lg">
-            </div>
-            <div class="absolute opacity-75 min-h-16 p-5 bottom-4 left-0 right-0 rounded-lg mx-5"
-              style="background-color: rgba(255, 255, 255, 0.9);">
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-xl font-semibold">2 Day Bromo</h4>
-                  <p class="text-gray-600">122 people</p>
-                </div>
-                <button
-                  class="bg-gray-600 text-white opacity-100 text-gray-700 rounded-full px-4 py-2 cursor-pointer">Detail</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </section>
+    <section class="px-6 sm:px-20 mt-10 mb-10 w-full">
+      <h1 class="text-gray-700 text-2xl font-bold mb-6">Explore Indonesia</h1>
+      <div class="flex flex-wrap space-x-4">
+        <button
+          class="bg-[#DBFFEC] text-black opacity-100 text-gray-700 rounded-full px-7 py-2 cursor-pointer">Filters</button>
+        <button
+          class="bg-[#DBFFEC] text-black opacity-100 text-gray-700 rounded-full px-7 py-2 cursor-pointer">Nearby</button>
+        <button
+          class="bg-[#5FFFAA] text-black opacity-100 text-gray-700 rounded-full px-7 py-2 cursor-pointer">Popular</button>
+        <button
+          class="bg-[#DBFFEC] text-black opacity-100 text-gray-700 rounded-full px-7 py-2 cursor-pointer">Recommendation</button>
+        <button
+          class="bg-[#DBFFEC] text-black opacity-100 text-gray-700 rounded-full px-7 py-2 cursor-pointer">New</button>
+      </div>
+      <div class="mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <img class="w-full h-48 object-cover rounded-t-lg rounded-lg" src="/public/asset/image/sumba.png" alt="Sumba Island">
+            <div class="px-6 py-4 mb-5">
+                <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
+                <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
+            </div>
+        </div>
+
+        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <img class="w-full h-48 object-cover rounded-t-lg rounded-lg" src="/public/asset/image/bali.png" alt="Sumba Island">
+            <div class="px-6 py-4 mb-5">
+                <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
+                <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
+            </div>
+        </div>
+
+        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <img class="w-full h-48 object-cover rounded-t-lg rounded-lg" src="/public/asset/image/bromo.png" alt="Sumba Island">
+            <div class="px-6 py-4 mb-5">
+                <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
+                <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
+            </div>
+        </div>
+
+        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <img class="w-full h-48 object-cover rounded-t-lg rounded-lg" src="/public/asset/image/rajaampat.png" alt="Sumba Island">
+            <div class="px-6 py-4 mb-5">
+                <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
+                <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
+            </div>
+        </div>
     </div>
+      </div>
+    </section>
 
     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
       class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full max-h-full backdrop-blur-sm">
