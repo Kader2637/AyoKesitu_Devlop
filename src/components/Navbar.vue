@@ -8,7 +8,6 @@
                 <img src="/logo.png" class="h-24" alt="ayokesitu-logo.png">
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
-
                 <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
                     class="text-black focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center bg-[#DBFFEC]"
                     type="button">
