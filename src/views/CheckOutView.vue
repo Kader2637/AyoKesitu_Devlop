@@ -10,7 +10,7 @@ const router = useRouter()
     <div class="bg-[#D0EFFF] min-h-screen w-full flex flex-col">
         <Navbar />
         <div class="flex-1">
-            <div class="container mx-auto px-4 mt-4">
+            <div class="container mx-auto px-4 mt-4 mt-40">
                 <div class="text-gray-500 text-sm mb-6">
                     <span>Shipping Address</span>
                     <span class="mx-2">&gt;</span>

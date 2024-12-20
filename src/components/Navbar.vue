@@ -127,7 +127,7 @@ onUnmounted(() => {
                         class="text-black focus:outline-none font-medium rounded-full text-sm px-5 py-4 text-center bg-[#DBFFEC]">
                         Sign in
                     </button>
-                    <button @click="router.push('/signup')"
+                    <button  @click="toggleModal"
                         class="text-black focus:outline-none font-medium rounded-full text-sm px-5 py-4 text-center bg-[#DBFFEC]">
                         Sign up
                     </button>
