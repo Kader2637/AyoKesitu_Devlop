@@ -1,5 +1,15 @@
 <script setup>
+import { ref } from 'vue';
 import Navbar from '@/components/Navbar.vue';
+
+const isModalVisible = ref(false);
+
+const openModal = () => {
+    isModalVisible.value = true;
+};
+const closeModal = () => {
+    isModalVisible.value = false;
+};
 </script>
 <template>
     <div class="min-h-screen w-full flex flex-col bg-[#93DAFF]">
@@ -93,9 +103,12 @@ import Navbar from '@/components/Navbar.vue';
                                 <h3 class="font-bold text-lg mb-4"><i
                                         class="fas fa-info-circle text-blue-500 mr-2"></i>Details</h3>
                                 <p class="mt-3"><i class="fas fa-user text-gray-500 mr-2"></i>Name: Fufu Fafa</p>
-                                <p class="mt-3"><i class="fas fa-envelope text-gray-500 mr-2"></i>Email: FufuFafa21@gmail.com</p>
-                                <p class="mt-3"><i class="fas fa-calendar-alt text-gray-500 mr-2"></i>Date: Aug 6, 3:16 AM</p>
-                                <p class="mt-3"><i class="fas fa-file-invoice text-gray-500 mr-2"></i>Invoice #: 42344 - 0002</p>
+                                <p class="mt-3"><i class="fas fa-envelope text-gray-500 mr-2"></i>Email:
+                                    FufuFafa21@gmail.com</p>
+                                <p class="mt-3"><i class="fas fa-calendar-alt text-gray-500 mr-2"></i>Date: Aug 6, 3:16
+                                    AM</p>
+                                <p class="mt-3"><i class="fas fa-file-invoice text-gray-500 mr-2"></i>Invoice #: 42344 -
+                                    0002</p>
                             </div>
 
                             <div class="bg-gray-50 p-4 rounded mb-6">
@@ -117,7 +130,7 @@ import Navbar from '@/components/Navbar.vue';
                                         address.</span>
                                 </label>
                                 <div class="flex justify-center">
-                                    <button class="bg-green-500 text-white px-6 py-2 rounded-xl">
+                                    <button class="bg-green-500 text-white px-6 py-2 rounded" @click="openModal">
                                         <i class="fas fa-check mr-2"></i>Confirm
                                     </button>
                                 </div>
@@ -130,4 +143,26 @@ import Navbar from '@/components/Navbar.vue';
             <div class="bg-[#D0EFFF] h-[50vh]"></div>
         </div>
     </div>
+
+
+    <div v-if="isModalVisible" class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <div class="flex justify-center mb-4">
+                <i class="fas fa-check-circle text-green-500 text-5xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-center text-green-500">Payment Successful</h2>
+            <p class="text-center text-gray-600 mt-2">Successfully paid 2,992,500 to AyoKesitu</p>
+            <hr class="my-4">
+            <div class="text-sm text-gray-700 mb-4">
+                <p class="mt-3"><strong>Transaction Number:</strong> 1234 5678 9932</p>
+                <p class="mt-3"><strong>Date:</strong> 19 August 2045 • 12:45</p>
+                <p class="mt-3"><strong>Status:</strong> <span class="text-green-500">✔ Success</span></p>
+                <p class="mt-3"><strong>Type of Transactions:</strong> QRIS</p>
+                <p class="mt-3"><strong>Nominal:</strong> Rp 2,992,500</p>
+            </div>
+            <h3 class="text-center text-green-500 text-xl font-bold">Rp 2,992,500</h3>
+            <button class="bg-green-500 text-white px-6 py-2 rounded mt-4 w-full" @click="closeModal">Continue</button>
+        </div>
+    </div>
+
 </template>
