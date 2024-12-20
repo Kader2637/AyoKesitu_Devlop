@@ -4,17 +4,14 @@ import Footer from '../components/Footer.vue'
 </script>
 <template>
     <div class="bg-[#D0EFFF] overflow-x-hidden">
-
-
         <div class="flex flex-col relative">
-
             <div class="absolute inset-0 z-0 overflow-hidden">
                 <img src="/asset/image/bannerhome.png" alt="Background"
                     class="w-full h-full object-cover filter blur-sm" />
             </div>
             <Navbar />
 
-            <div class="flex flex-col items-center justify-center text-center mt-16 z-10 relative px-4 sm:px-8">
+            <div class="flex flex-col items-center justify-center text-center mt-52 z-10 relative px-4 sm:px-8">
                 <h1 class="text-4xl text-black font-semibold">Discover the vacation of your dreams</h1>
                 <p class="text-black mt-2 max-w-3xl">Search low price on flights, travel, and trip tours</p>
             </div>
@@ -311,74 +308,5 @@ import Footer from '../components/Footer.vue'
         </section>
 
         <Footer />
-
-        <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-            class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full max-h-full backdrop-blur-sm">
-            <div class="relative w-full max-w-4xl max-h-full">
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <div class="flex items-center justify-between dark:border-gray-600">
-                        <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="authentication-modal">
-                            <span class="sr-only">Close modal</span>
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-12 gap-4 p-3">
-                        <div class="col-span-12 md:col-span-6">
-                            <div class="p-4 md:p-5">
-                                <form class="space-y-4" action="#">
-                                    <div class="flex justify-center">
-                                        <img src="/asset/image/logo.svg" alt="logo.png" class="flex justify-center">
-                                    </div>
-                                    <div>
-                                        <label for="email"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            Email</label>
-                                        <input type="email" name="email" id="email"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                            placeholder="name@company.com" required />
-                                    </div>
-                                    <div>
-                                        <label for="password"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            Password</label>
-                                        <input type="password" name="password" id="password" placeholder="••••••••"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                            required />
-                                    </div>
-                                    <div class="flex justify-end">
-                                        <a href="#"
-                                            class="text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot
-                                            Password?</a>
-                                    </div>
-                                    <button type="submit"
-                                        class="w-full text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                                        Sign in
-                                    </button>
-                                    <span class="flex justify-center">Or</span>
-                                    <a href="#"
-                                        class="border p-3 rounded-lg bg-gray-100 flex justify-center items-center"><i
-                                            class="fa fa-google fa-md"></i> Sign in with Google</a>
-                                    <a href="#"
-                                        class="border p-3 rounded-lg bg-gray-100 flex justify-center items-center"><i
-                                            class="fa fa-facebook fa-md"></i> Sign in with Facebook</a>
-
-                                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                        Don't have an account? <a href="#"
-                                            class="text-blue-700 hover:underline dark:text-blue-500">Sign
-                                            up</a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-span-12 md:col-span-6">
-                            <img src="/asset/image/login.svg" alt="Login illustration"
-                                class="rounded-lg p-3 object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </template>

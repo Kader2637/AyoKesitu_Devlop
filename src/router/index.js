@@ -24,6 +24,21 @@ const router = createRouter({
       name: 'detail/destination',
       component: () => import('../views/DetailDestinationView.vue'),
     },
+    {
+      path: '/chekout',
+      name: 'chekout',
+      component: () => import('../views/CheckOutView.vue'),
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('../views/PaymentView.vue'),
+    },
+    {
+      path: '/goingto',
+      name: 'goingto',
+      component: () => import('../views/GoingToView.vue'),
+    },
   ],
 })
 
