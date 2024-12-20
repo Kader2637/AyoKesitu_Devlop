@@ -118,7 +118,7 @@ onUnmounted(() => {
                                 </div>
                                 <ul class="py-2">
                                     <li>
-                                        <button @click="router.push('/chart')"
+                                        <button @click="router.push('/order')"
                                             class="block px-4 py-2 text-gray-800 w-full text-start hover:bg-[#A8E1FF] hover:text-white rounded">Your
                                             Order</button>
                                     </li>
