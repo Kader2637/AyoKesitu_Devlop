@@ -21,28 +21,23 @@ const toggleUserDropdown = () => {
     showUserDropdown.value = !showUserDropdown.value;
 };
 
-// Fungsi logout
 const logout = () => {
     isAuthenticated.value = false;
     showUserDropdown.value = false;
 };
 
-// Fungsi untuk menangani klik "Guest"
 const handleGuestClick = () => {
     isAuthenticated.value = true;
 };
 
-// Fungsi untuk mendeteksi scroll
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 50;
 };
 
-// Tambahkan event listener saat komponen dimuat
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
 });
 
-// Hapus event listener saat komponen dihancurkan
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll);
 });
@@ -199,6 +194,10 @@ onUnmounted(() => {
             </button>
         </div>
         <ul class="p-4 space-y-4">
+            <li>
+                <a @click="router.push('/')"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 cursor-pointer">Home</a>
+            </li>
             <li>
                 <a @click="router.push('/goingto')"
                     class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 cursor-pointer">Going To</a>

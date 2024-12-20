@@ -98,7 +98,6 @@ const router = useRouter()
                     </form>
                 </div>
 
-                <!-- Order Summary -->
                 <div class="bg-white shadow-lg rounded-lg p-6 w-full lg:w-1/3 max-h-[280px]">
                     <h2 class="text-xl font-bold mb-4">Order Summary</h2>
                     <div class="space-y-2">
