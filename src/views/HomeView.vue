@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
 </script>
 <template>
     <div class="bg-[#D0EFFF] overflow-x-hidden">
@@ -141,7 +144,7 @@ import Footer from '../components/Footer.vue'
                 <div class="max-w-full rounded-lg overflow-hidden shadow-lg bg-white">
                     <img class="w-full h-48 object-cover rounded-t-lg" src="/asset/image/sumba.png" alt="Sumba Island">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                        <button class="font-bold text-xl mb-2"  @click="router.push('/detail/destination')">5 Day Sumba Island</button>
                         <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
                         <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
                     </div>
@@ -149,7 +152,7 @@ import Footer from '../components/Footer.vue'
                 <div class="max-w-full rounded-lg overflow-hidden shadow-lg bg-white">
                     <img class="w-full h-48 object-cover rounded-t-lg" src="/asset/image/sumba.png" alt="Sumba Island">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                        <button class="font-bold text-xl mb-2"  @click="router.push('/detail/destination')">5 Day Sumba Island</button>
                         <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
                         <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
                     </div>
@@ -157,7 +160,7 @@ import Footer from '../components/Footer.vue'
                 <div class="max-w-full rounded-lg overflow-hidden shadow-lg bg-white">
                     <img class="w-full h-48 object-cover rounded-t-lg" src="/asset/image/sumba.png" alt="Sumba Island">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                        <button class="font-bold text-xl mb-2"  @click="router.push('/detail/destination')">5 Day Sumba Island</button>
                         <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
                         <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
                     </div>
@@ -165,7 +168,7 @@ import Footer from '../components/Footer.vue'
                 <div class="max-w-full rounded-lg overflow-hidden shadow-lg bg-white">
                     <img class="w-full h-48 object-cover rounded-t-lg" src="/asset/image/sumba.png" alt="Sumba Island">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">5 Day Sumba Island</div>
+                        <button class="font-bold text-xl mb-2"  @click="router.push('/detail/destination')">5 Day Sumba Island</button>
                         <p class="text-gray-700 text-base">5 Nov - 10 Nov 2024</p>
                         <p class="text-gray-900 text-2xl mt-4">$1,420/Person</p>
                     </div>

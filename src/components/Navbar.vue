@@ -4,14 +4,25 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const router = useRouter();
 const showModal = ref(false);
+const RegisshowModal = ref(false);
 const showSidebar = ref(false);
 const isAuthenticated = ref(false);
 const showUserDropdown = ref(false);
-const isScrolled = ref(false); 
-
+const isScrolled = ref(false);
 const toggleModal = () => {
-    showModal.value = !showModal.value;
+    if (!showModal.value) {
+        RegisshowModal.value = false; 
+    }
+    showModal.value = !showModal.value; 
 };
+
+const RegistoggleModal = () => {
+    if (!RegisshowModal.value) {
+        showModal.value = false; 
+    }
+    RegisshowModal.value = !RegisshowModal.value;
+};
+
 
 const toggleSidebar = () => {
     showSidebar.value = !showSidebar.value;
@@ -107,9 +118,9 @@ onUnmounted(() => {
                                 </div>
                                 <ul class="py-2">
                                     <li>
-                                        <a @click="router.push('/chart')"
-                                            class="block px-4 py-2 text-gray-800 hover:bg-[#A8E1FF] hover:text-white rounded">Your
-                                            Order</a>
+                                        <button @click="router.push('/chart')"
+                                            class="block px-4 py-2 text-gray-800 w-full text-start hover:bg-[#A8E1FF] hover:text-white rounded">Your
+                                            Order</button>
                                     </li>
                                     <hr class="my-2 border-gray-300">
                                     <li>
@@ -127,7 +138,7 @@ onUnmounted(() => {
                         class="text-black focus:outline-none font-medium rounded-full text-sm px-5 py-4 text-center bg-[#DBFFEC]">
                         Sign in
                     </button>
-                    <button  @click="toggleModal"
+                    <button @click="RegistoggleModal"
                         class="text-black focus:outline-none font-medium rounded-full text-sm px-5 py-4 text-center bg-[#DBFFEC]">
                         Sign up
                     </button>
@@ -213,15 +224,13 @@ onUnmounted(() => {
         </ul>
     </div>
 
-    <!-- Modal -->
     <div v-if="showModal" tabindex="-1" aria-hidden="true"
         class="fixed inset-0 z-50 flex justify-center items-center w-full h-full backdrop-blur-sm">
         <div class="relative w-full max-w-4xl max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between dark:border-gray-600 p-4">
-                    <h2 class="text-lg font-bold">Sign In</h2>
-                    <button @click="toggleModal"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-600 p-4">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Login</h2>
+                    <button @click="toggleModal" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                         <span class="sr-only">Close modal</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -233,27 +242,54 @@ onUnmounted(() => {
                 <div class="grid grid-cols-12 gap-4 p-3">
                     <div class="col-span-12 md:col-span-6">
                         <div class="p-4 md:p-5">
-                            <form class="space-y-4" @submit.prevent="isAuthenticated.value = true; toggleModal();">
+                            <form class="space-y-4" action="#">
                                 <div class="flex justify-center">
-                                    <img src="/asset/image/logo.svg" alt="logo.png" class="flex justify-center">
+                                    <img src="/public/logo.png" alt="logo.png" class="flex w-32 h-32 justify-center">
                                 </div>
                                 <div>
                                     <label for="email"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                                    <input type="email" id="email"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                        email</label>
+                                    <input type="email" name="email" id="email"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                         placeholder="name@company.com" required />
                                 </div>
                                 <div>
                                     <label for="password"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                    <input type="password" id="password"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                        password</label>
+                                    <input type="password" name="password" id="password" placeholder="••••••••"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                        placeholder="••••••••" required />
+                                        required />
+                                </div>
+                                <div class="flex justify-end">
+                                    <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot
+                                        Password?</a>
                                 </div>
                                 <button type="submit"
-                                    class="w-full text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Sign
-                                    in</button>
+                                    class="w-full text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                                    Sign in
+                                </button>
+                                <span class="flex justify-center">Or</span>
+                                <button type="submit"
+                                    class="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">Sign
+                                    In</button>
+
+                                <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-300">Or</div>
+
+                                <a href="#"
+                                    class="flex items-center justify-center w-full px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                    <i class="fab fa-google mr-2"></i> Sign in with Google
+                                </a>
+                                <a href="#"
+                                    class="flex items-center justify-center w-full px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                    <i class="fab fa-facebook mr-2"></i> Sign in with Facebook
+                                </a>
+                                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                    Don't you have an account? <a href="#" @click="RegistoggleModal"
+                                        class="text-blue-700 hover:underline dark:text-blue-500">Sign
+                                        up</a>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -264,4 +300,96 @@ onUnmounted(() => {
             </div>
         </div>
     </div>
+    <div v-if="RegisshowModal" tabindex="-1" aria-hidden="true"
+        class="fixed inset-0 z-50 flex justify-center items-center w-full h-full backdrop-blur-sm bg-gray-800 bg-opacity-50">
+        <div class="relative w-full max-w-4xl max-h-full">
+            <div class="relative bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-600 p-4">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Register</h2>
+                    <button @click="RegistoggleModal" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <span class="sr-only">Close modal</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="grid grid-cols-12 gap-4 p-6">
+                    <div class="col-span-12 md:col-span-6">
+                        <div class="p-4">
+                            <form class="space-y-6" action="#">
+                                <div class="flex justify-center mb-4">
+                                    <img src="/public/logo.png" alt="Logo" class="w-32 h-32">
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name"
+                                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Your Name"
+                                            class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                                    </div>
+
+                                    <div>
+                                        <label for="email"
+                                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="name@company.com"
+                                            class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                                    </div>
+
+                                    <div>
+                                        <label for="password"
+                                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                                        <input type="password" id="password" name="password" placeholder="••••••••"
+                                            class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                                    </div>
+
+                                    <div>
+                                        <label for="confirm-password"
+                                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Confirm
+                                            Password</label>
+                                        <input type="password" id="confirm-password" name="confirm-password"
+                                            placeholder="••••••••"
+                                            class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <a href="#" class="text-sm text-blue-600 hover:underline dark:text-blue-400">Forgot
+                                        Password?</a>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">Sign
+                                    In</button>
+
+                                <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-300">Or</div>
+
+                                <a href="#"
+                                    class="flex items-center justify-center w-full px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                    <i class="fab fa-google mr-2"></i> Sign in with Google
+                                </a>
+                                <a href="#"
+                                    class="flex items-center justify-center w-full px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+                                    <i class="fab fa-facebook mr-2"></i> Sign in with Facebook
+                                </a>
+
+                                <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-300">
+                                    Do you already have an account? <a href="#"
+                                        class="text-blue-600 hover:underline dark:text-blue-400" @click="toggleModal">Sign in</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block col-span-12 md:col-span-6">
+                        <img src="/asset/image/login.svg" alt="Login illustration" class="w-full rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </template>

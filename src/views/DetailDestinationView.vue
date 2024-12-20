@@ -1,12 +1,25 @@
 <script setup>
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/Navbar.vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+import { ref } from 'vue';
+const showModal = ref(false);
+
+function addToCart() {
+    showModal.value = true;
+}
+
+function closeModal() {
+    showModal.value = false;
+}
 </script>
 
 <template>
     <div class="bg-[#D0EFFF] min-h-screen">
         <Navbar />
-        <div class="max-w-screen-xl mx-auto px-4 py-8">
-            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+        <div class="max-w-screen-xl mx-auto px-4 py-8 ">
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-40">
                 <div class="relative">
                     <img src="/public/asset/image/sumba_island.png" alt="Sumba Landscape"
                         class="w-full h-auto rounded-lg shadow-md object-cover" style="max-height: 500px;" />
@@ -21,7 +34,6 @@ import Navbar from '../components/Navbar.vue'
                             class="h-24 w-full object-cover rounded-md shadow-md" />
                     </div>
                 </div>
-
                 <div class="space-y-6">
                     <div>
                         <h1 class="text-4xl font-extrabold text-gray-800">Sumba Island</h1>
@@ -92,10 +104,19 @@ import Navbar from '../components/Navbar.vue'
                             <p class="text-sm text-gray-500">Price starts from</p>
                             <p class="text-3xl font-bold text-green-600">Rp 2.150.000</p>
                         </div>
-                        <button
-                            class="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 shadow-md">
-                            Booking
-                        </button>
+                        <div class="flex gap-2">
+                            <button @click="addToCart"
+                                class="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-green-600 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7 22q-.825 0-1.412-.587T5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22m10 0q-.825 0-1.412-.587T15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22M5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h11q.425 0 .713.288T19 16t-.288.713T18 17H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H2q-.425 0-.712-.288T1 3t.288-.712T2 2h1.625q.275 0 .525.15t.375.425z" />
+                                </svg>
+                            </button>
+                            <button @click="router.push('/chekout')"
+                                class="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 shadow-md">
+                                Booking
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -170,6 +191,19 @@ import Navbar from '../components/Navbar.vue'
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <!-- modal chart success  -->
+    <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <div class="flex justify-center mb-4">
+                <i class="fas fa-check-circle text-green-500 text-5xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-center text-green-500">Item Added to Cart</h2>
+            <p class="text-center text-gray-600 mt-2">You have successfully added an item to your cart!</p>
+            <hr class="my-4">
+            <button class="bg-green-500 text-white px-6 py-2 rounded mt-4 w-full" @click="closeModal">Continue</button>
         </div>
     </div>
 </template>

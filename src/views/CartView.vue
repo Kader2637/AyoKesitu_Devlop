@@ -95,7 +95,7 @@ const router = useRouter()
                         </div>
                     </div>
                     <hr class="mt-5 mb-3">
-                    <button @click="router.push('/chekout')" class="mt-4 bg-green-400 text-white w-full py-2 rounded hover:bg-green-500 transition">
+                    <button @click="router.push('/payment')" class="mt-4 bg-green-400 text-white w-full py-2 rounded hover:bg-green-500 transition">
                         Checkout now
                     </button>
                 </div>
