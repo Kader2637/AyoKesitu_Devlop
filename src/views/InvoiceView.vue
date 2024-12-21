@@ -15,7 +15,7 @@ const closeModal = () => {
     <div class="min-h-screen w-full flex flex-col bg-[#93DAFF]">
         <Navbar />
         <div class="min-h-screen">
-            <div class=" h-[50vh]">
+            <div class=" h-[30vh]">
                 <div class="container mx-auto p-6 mt-40">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">

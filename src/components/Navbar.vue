@@ -39,6 +39,7 @@ const logout = () => {
 
 const handleGuestClick = () => {
     isAuthenticated.value = true;
+    showModal.value = !showModal.value; 
 };
 
 const handleScroll = () => {
@@ -266,12 +267,12 @@ onUnmounted(() => {
                                     <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot
                                         Password?</a>
                                 </div>
-                                <button type="submit"
+                                <button type="button"  @click="handleGuestClick"
                                     class="w-full text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     Sign in
                                 </button>
                                 <span class="flex justify-center">Or</span>
-                                <button type="submit"
+                                <button type="button"
                                     class="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">Sign
                                     In</button>
 
