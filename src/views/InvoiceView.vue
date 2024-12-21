@@ -15,11 +15,11 @@ const closeModal = () => {
     <div class="min-h-screen w-full flex flex-col bg-[#93DAFF]">
         <Navbar />
         <div class="min-h-screen">
-            <div class=" h-[30vh]">
-                <div class="container mx-auto p-6 mt-40">
+            <div class="h-[30vh]">
+                <div class="container mx-auto p-4 sm:p-6 mt-20">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex justify-between items-center mb-4">
+                        <div class="lg:col-span-2 bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                            <div class="flex flex-wrap justify-between items-center mb-4">
                                 <div>
                                     <h2 class="text-lg font-bold">INVOICE #42344 - 0002</h2>
                                     <p class="text-gray-500">Due next month</p>
@@ -29,7 +29,7 @@ const closeModal = () => {
                                     <a href="#" class="text-blue-500">Copy link</a>
                                 </div>
                             </div>
-                            <div class="flex space-x-4 mb-4">
+                            <div class="flex flex-wrap space-x-2 space-y-2 sm:space-y-0 mb-4">
                                 <button class="bg-green-500 text-white px-4 py-2 rounded">
                                     <i class="fas fa-paper-plane mr-2"></i>Send Invoice
                                 </button>
@@ -59,45 +59,34 @@ const closeModal = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold mb-2"><i class="fas fa-list text-gray-500 mr-2"></i>Items</h3>
-                                <table class="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr class="bg-gray-200">
-                                            <th class="p-2">Description</th>
-                                            <th class="p-2">QTY</th>
-                                            <th class="p-2">Price</th>
-                                            <th class="p-2">Total Amount</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="p-2">Bromo & Raja ampat</td>
-                                            <td class="p-2">1</td>
-                                            <td class="p-2">$1950.25</td>
-                                            <td class="p-2">$1950.25</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-2">Bromo & Raja ampat</td>
-                                            <td class="p-2">1</td>
-                                            <td class="p-2">$500.35</td>
-                                            <td class="p-2">$500.35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-2">Bromo & Raja ampat</td>
-                                            <td class="p-2">1</td>
-                                            <td class="p-2">$1950.25</td>
-                                            <td class="p-2">$1950.25</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p-2">Bromo & Raja ampat</td>
-                                            <td class="p-2">1</td>
-                                            <td class="p-2">$500.35</td>
-                                            <td class="p-2">$500.35</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr class="bg-gray-200">
+                                                <th class="p-2">Description</th>
+                                                <th class="p-2">QTY</th>
+                                                <th class="p-2">Price</th>
+                                                <th class="p-2">Total Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="p-2">Bromo & Raja ampat</td>
+                                                <td class="p-2">1</td>
+                                                <td class="p-2">$1950.25</td>
+                                                <td class="p-2">$1950.25</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2">Bromo & Raja ampat</td>
+                                                <td class="p-2">1</td>
+                                                <td class="p-2">$500.35</td>
+                                                <td class="p-2">$500.35</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-
                         <div>
                             <div class="bg-gray-50 p-4 rounded mb-6">
                                 <h3 class="font-bold text-lg mb-4"><i
@@ -110,7 +99,6 @@ const closeModal = () => {
                                 <p class="mt-3"><i class="fas fa-file-invoice text-gray-500 mr-2"></i>Invoice #: 42344 -
                                     0002</p>
                             </div>
-
                             <div class="bg-gray-50 p-4 rounded mb-6">
                                 <h3 class="font-bold text-lg mb-4"><i
                                         class="fas fa-question-circle text-yellow-500 mr-2"></i>Ask Us</h3>
@@ -135,7 +123,6 @@ const closeModal = () => {
                                     </button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -143,6 +130,7 @@ const closeModal = () => {
             <div class="bg-[#D0EFFF] h-[50vh]"></div>
         </div>
     </div>
+
 
 
     <div v-if="isModalVisible" class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 flex justify-center items-center">
