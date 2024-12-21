@@ -39,7 +39,6 @@ const logout = () => {
 
 const handleGuestClick = () => {
     isAuthenticated.value = true;
-    showModal.value = !showModal.value; 
 };
 
 const handleScroll = () => {
@@ -58,7 +57,7 @@ onUnmounted(() => {
 
 <template>
     <nav :class="[
-        'w-full z-20 top-0 start-0 p-4 fixed transition-colors duration-300',
+        'w-full z-20 top-0 start-0 p-2 fixed transition-colors duration-300',
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
     ]">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
