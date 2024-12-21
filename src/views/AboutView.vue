@@ -8,8 +8,8 @@ import Footer from '@/components/Footer.vue';
     <Navbar />
     <div class="relative flex justify-center items-center py-8 ">
       <div class="relative w-[1290px] mt-40">
-        <img src="/public/asset/image/about.png" alt="Background" class="w-full h-auto object-cover rounded-xl">
-        <div class="absolute inset-0 flex flex-col justify-center items-center">
+        <img src="/public/asset/image/about.png" alt="Background" class="w-full min-h-44 object-cover rounded-xl">
+        <div class="absolute min-h-44 inset-0 flex flex-col justify-center items-center">
           <button class="bg-white text-black px-4 py-1 rounded-full font-medium shadow mb-4">Career</button>
           <h1 class="text-black text-4xl font-bold mb-4">Let’s Collaborate</h1>
           <button class="bg-white text-black px-6 py-2 rounded-full font-medium shadow-lg">Explore

@@ -9,26 +9,26 @@ import Footer from '../components/Footer.vue';
             <Navbar />
         </div>
 
-        <div class="relative overflow-hidden">
+        <div class="relative">
             <img src="/public/asset/image/goingto.png" alt="Background" class="w-full h-48 sm:h-full object-cover" />
 
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+            <div class="absolute inset-0 flex mt-48 md:mt-0 flex-col items-center justify-center text-white px-4">
                 <h1 class="text-xl sm:text-4xl font-bold text-center text-white">Fun experiences for unforgettable trips</h1>
-                <div class="mt-6 flex flex-wrap gap-4 justify-center w-full">
-                    <div class="flex items-center bg-white rounded-md shadow-md px-3 py-2 w-full max-w-md">
+                <div class="mt-6 flex flex-row flex-wrap gap-4 justify-center w-full">
+                    <div class="flex items-center bg-white rounded-md shadow-md px-3 py-2 max-w-md">
                         <span class="text-gray-500 mr-2">✈️</span>
                         <input type="text" placeholder="Explore your next Destination"
-                            class="focus:outline-none text-gray-700 w-full" />
+                            class="focus:outline-none text-gray-700" />
                     </div>
                     <input type="date" placeholder="Departure"
-                        class="px-4 py-2 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-300 w-full max-w-xs" />
+                        class="px-4 py-2 text-gray-500 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-300 w-full max-w-xs" />
                     <input type="date" placeholder="Return"
-                        class="px-4 py-2 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-300 w-full max-w-xs" />
+                        class="px-4 py-2 text-gray-500 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-300 w-full max-w-xs" />
                 </div>
             </div>
         </div>
 
-        <div class="relative -mt-24 bg-[#E8F7FF] rounded-tl-[120px] shadow-lg pt-12 pb-20 px-6">
+        <div class="relative mt-36 md:-mt-24 bg-[#E8F7FF] rounded-tl-[120px] shadow-lg pt-12 pb-20 px-6">
             <div class="flex justify-center mb-8">
                 <div class="flex space-x-6 text-sm sm:text-lg font-semibold">
                     <button
